@@ -69,6 +69,7 @@ nav a:hover {
 .intro {
    background-color: #EB1767;
    border-bottom: 1px solid #AE1F58;
+   padding-bottom: 5em;
 }
 
 .welcome {
@@ -104,15 +105,15 @@ nav a:hover {
   padding: 1.25em 1em;
   border-radius: .3em;
   display: inline-block;
-  margin: 1em 0 4em 0;
+  border: 0;
 }
 
 .apply_button:hover, .submit_button:hover {
-  color: #EB1767;
+  color: #AE1F58;
   background-color: white;
 }
 
-.fw_bg {
+.description {
   background: #444 url(http://academy.smashingboxes.com//assets/timeline_bg-c6df24fc8cdea898ad4491ad758fdbe7.jpg);
   background-attachment: fixed;
   background-size: cover;
@@ -120,7 +121,7 @@ nav a:hover {
   background-repeat: no-repeat;
 }
 
-.what-is-this {
+.description__content {
   margin: 0 auto;
   padding:10em 0;
   max-width: 46em;
@@ -132,25 +133,31 @@ nav a:hover {
   overflow: auto;
 }
 
-.courseflow_bg_white {
-  transition: all 0.5s ease;
+.courseflow_bg {
   background: white;
   max-width: 52em;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
-.courseflow_bg_white:hover {
-  background: #AE1F58;
-  height: 70%;
+.courseflow_bg_slide {
+   background-color: #eb1767;
+   position: absolute;
+   left: 20%;
+   right: 20%;
+   width: 0%;
+   height: 30%;
+   transition-property: width;
+   webkit-transition-property: width;
+   -webkit-transition-duration: .5s; /* Safari */
+   transition-duration: .5s;
 }
 
-/*.courseflow_bg_slide {
-  transition: all 0.5s ease;
-  height: 70%;
-}*/
-
+.courseflow:hover .courseflow_bg_slide {
+   width: 60%;
+}
 
 .courseflow_diagram {
   width:100%;
@@ -175,23 +182,21 @@ nav a:hover {
 h3 {
   font-size: 1.5em;
 }
-.about a, .call-to-action a {
+
+a {
   color:#EB1767;
   text-decoration: none;
   font-weight: bold;
 }
 
-.about a:hover {
+.about a:hover,
+.link:hover {
   color:#e3e3e3;
+  transition: color 0.5s ease;
 }
 
 .course a {
   font-weight: normal;
-}
-
-
-tr:hover {
-
 }
 
 hr {
@@ -280,17 +285,41 @@ td {
 }
 
 .table_button {
-  background: #EB1767;
+  transition: font-color, background-color 0.5s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #EB1767;
   border-radius: .3em;
   padding: .9em 1.4em;
   font-color: white;
   text-transform: uppercase;
-  font-size: .8em
+  font-size: .8em;
 }
 
 .last_cell .table_button {
   color:white;
 }
+
+.row_highlight:hover .curriculum {
+   color: white;
+}
+
+.row_highlight:hover .table_button {
+   background-color: white;
+   color: #EB1767;
+}
+
+.row_highlight:hover {
+   background-color: #EB1767;
+   color: white;
+}
+
+.table_button:hover {
+   background-color: white;
+   color: #EB1767;
+}
+
 .map {
   background-image: url(http://academy.smashingboxes.com/assets/smashing_academy_map-af7e66d0b42cb911ae927a7e6e4ed9d1.png);
   background-size: cover;
@@ -302,51 +331,87 @@ td {
 
 .overlay {
   min-width: 50%;
+  max-width: 50%;
   height: 100%;
-  background: rgba(235, 23, 103, .7);
+  background: rgba(235, 23, 103, .85);
   position: absolute;
   right: 0;
-  float:left;
 }
 
 .contact {
-  padding: 5em 10em;
+  padding: 5em 0 0 20% ;
+  width: 60%;
+  min-width: 15em;
 }
 
 .contact ul {
   list-style-type: none;
 }
 
-.contact-icon {
-  float: left;
-  padding: 1em;
+.contact_us {
+  padding-bottom: 1em;
 }
 
-.contact-info {
-  display:inline;
-  float: left;
+.contact_content {
+  vertical-align: middle;
+  padding: .5em 0;
+  font-size: 1.1em;
+}
 
+.contact_message {
+  width: 100%;
+  font-size: .9em;
+  padding: 2em 0;
+  line-height: 1.6em;
+}
+
+.contact_message strong {
+  color: white;
+  text-decoration: none !important;
+}
+
+.contact_message strong:hover {
+   color:#e3e3e3;
+   transition: color 0.5s ease;
+}
+}
+
+.contact_icon, .contact_content {
+  vertical-align: top;
+}
+
+.contact_info {
+  display: inline-block;
+  padding-left: 2em;
 }
 
 footer {
   width: 100%;
   background-color: #292627;
-  height: 100%;
-  min-height: 10em;
+  min-height: 9em;
   overflow: auto;
 }
 
 .footer-bar {
   max-width: 73em;
-  margin: auto;
-  overflow: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 2.5em;
+  position: relative;
 }
 
 .logo_bottom {
-  vertical-align: middle;
+   vertical-align: middle;
+   max-width: 33%;
+   float: left;
+}
+.logo_list {
+
+  /*position: absolute;
+  left: 0;*/
 }
 
-.logo_bottom li {
+.logo_list li {
   display: inline-block;
   padding: .3em;
   vertical-align: middle;
@@ -355,23 +420,47 @@ footer {
 }
 
 .newsletter {
-  text-align: center;
-  display: inline;
-  position: relative;
+  /*float: left;
+  width: 350px;
+  display: inline-block;
+  margin: 0 10%;*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -30%);
+  width: 30%;
+}
+
+.newsletter__sign-up {
+   font-size: .8em;
+   color: #4c4c4e;
+}
+
+.newsletter label {
+   display: block;
+   margin: 0 1.75em;
+}
+
+.newsletter__email {
+   line-height: 2.5em;
+   width: 20em;
+   margin: 0 1.75em;
 }
 
 .social {
-  padding-top: 2em;
-  float: right;
+   vertical-align: middle;
+   display: inline-block;
+   float: right;
+   padding-top: .5em;
 }
 
 .social li {
   display: inline-block;
-  padding: 0.6em .75em;
+  padding: .6em .75em;
 }
 
 .modal {
-  background: rgba(0,0,0,.7);
+  background: rgba(0,0,0,.6);
   position: fixed;
   top: 0;
   left: 0;
@@ -381,15 +470,39 @@ footer {
 }
 
 .modal-dialog {
-  background: #fefefe;
-  border-radius: 1em;
-  margin: 30em auto;
-  position: fixed;
-  top: 52em;
+  background: #e3e3e3;
+  border-radius: .5em;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  width: 52em;
-  margin-left:-52rm;
-  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 35em;
   z-index: 200;
-  height: 40em;
+  height: 25em;
+  text-align: center;
+  color: #4c4c4e;
+  padding: 1em;
+}
+
+.exit {
+   position: absolute;
+   top: 0;
+   right: 0;
+   font-weight: bold;
+   padding-top: .5em;
+   padding-right: .5em;
+   cursor: pointer;
+   font-size: 1.2em;
+}
+
+.modal-dialog h2 {
+   font-size: 2em;
+}
+
+.modal-content {
+   padding-top: 20%;
+}
+
+.exit:click < .modal{
+   display: none;
 }

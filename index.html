@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Smashing Academy</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-
+<link href="http://academy.smashingboxes.com/assets/favicon-a4a154cc33a0a115da1ca1e189c3c145.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 </head>
 <body>
 <header>
@@ -15,7 +15,7 @@
       <ul>
         <li><a href="http://academy.smashingboxes.com/curriculum">curriculum</a></li>
         <li><a href="http://academy.smashingboxes.com/#enroll">apply</a></li>
-        <li><a href="http://smashingboxes.com/ideas/faq">faq</a></li>
+        <li><a class="link" href="http://smashingboxes.com/ideas/faq">faq</a></li>
       </ul>
     </nav>
     <div class="clear"></div>
@@ -30,18 +30,17 @@
     <img src="http://academy.smashingboxes.com/assets/feature_image-58cbdddb7e095f2e4497da22bcb52be0.png" atl="The Iron Yard + Smashing Boxes Logo"<img>
     <a class="apply_button" href="http://academy.smashingboxes.com/#enroll">apply</a>         </div>
 </div>
-<div class="fw_bg">
-  <div class="what-is-this">
+<div class="description">
+  <div class="description__content">
     <h2>WHAT IS THIS?</h2>
     <p>Qualified programmers are among the most highly sought after professionals in today’s job market. THE IRON YARD ACADEMY POWERED BY SMASHING BOXES exists to help remedy this need by training - or retraining - the workforce of the future. No prerequisites, or liberal arts requirements; it’s simply the education of tomorrow.</p>
     <p>Centered around practical application, each course combines teaching, mentorship, collaboration, and real world development work over 12 intensive weeks. By the end, our students emerge as professional, junior-level programmers and either jump straight into internships with one of our hiring partners or work with our team to find the right job.</p>
   </div>
 </div>
 <div class="courseflow">
-  <div class="courseflow_bg_white">
-    <!-- <div class="courseflow_bg_slide"> -->
+  <div class="courseflow_bg">
+      <div class="courseflow_bg_slide"></div>
       <img class="courseflow_diagram" alt="courseflow diagram" src="http://academy.smashingboxes.com/assets/smashing_academy-timeline-a5cd562e42b9c93b2e8406a9eee1fd43.png">
-    <!-- </div> -->
   </div>
 </div>
 <div class="about">
@@ -68,11 +67,14 @@
       <h5>Campus Director</h5>
     </li>
   </ul>
+  <br>
+  <p>Do you share a passion for helping others and teaching? We're always looking for additional instructors as our company grows. <a href="mailto:academy@smashingboxes.com?subject=Instructor%20Inquiry">Contact Us</a> if you're interested.
+  </p>
 </div>
 <div class="call-to-action">
   <div class="apply">
     <h2>Apply Today!</h2>
-    <p>Class sizes are kept small to facilitate collaborative learning and space will fill up quickly. Check out the <a href="http://smashingboxes.com/ideas/faq">FAQ Page</a> to learn more.</p>
+    <p>Class sizes are kept small to facilitate collaborative learning and space will fill up quickly. Check out the <a class="link" href="http://smashingboxes.com/ideas/faq">FAQ Page</a> to learn more.</p>
     <hr>
   <table class="course-calendar">
     <thead>
@@ -86,21 +88,21 @@
     <tbody>
       <tr class="row_highlight">
         <td class="first_cell">Jan 2015</td>
-        <td class="course"><a  href="http://academy.smashingboxes.com/curriculum#front-end">Front End Engineering</a></td>
+        <td class="course"><a class="curriculum" href="http://academy.smashingboxes.com/curriculum#front-end">Front End Engineering</a></td>
         <td>Christopher Davies</td>
-        <td class="last_cell"><a href="https://theironyard.typeform.com/to/Bn9FmZ" class="table_button">Apply</a></td>
+        <td class="last_cell"><a class="table_button" href="https://theironyard.typeform.com/to/Bn9FmZ">Apply</a></td>
       </tr>
       <tr class="row_highlight">
         <td class="first_cell">Jan 2015</td>
-        <td class="course"><a href="http://academy.smashingboxes.com/curriculum#rails">Ruby on Rails</a></td>
+        <td class="course"><a class="curriculum" href="http://academy.smashingboxes.com/curriculum#rails">Ruby on Rails</a></td>
         <td>Mason Matthews</td>
-        <td class="last_cell"><a href="https://theironyard.typeform.com/to/Bn9FmZ" class="table_button">Apply</a></td>
+        <td class="last_cell"><a class="table_button" href="https://theironyard.typeform.com/to/Bn9FmZ" >Apply</a></td>
       </tr>
       <tr class="row_highlight">
         <td class="first_cell">Jan 2015</td>
-        <td class="course"><a href="http://academy.smashingboxes.com/curriculum#python">Python</a></th>
+        <td class="course"><a class="curriculum" href="http://academy.smashingboxes.com/curriculum#python">Python</a></th>
         <td>Clinton Dreisbach</td>
-        <td class="last_cell"><a href="https://theironyard.typeform.com/to/Bn9FmZ" class="table_button">Apply</a></td>
+        <td class="last_cell"><a class="table_button" href="https://theironyard.typeform.com/to/Bn9FmZ">Apply</a></td>
       </tr>
     </tbody>
   </table>
@@ -109,71 +111,83 @@
 <div class="map">
   <div class="overlay">
     <div class="contact">
-      <h2>CONTACT US</h2>
+      <h2 class="contact_us">CONTACT US</h2>
       <ul>
-        <li>
-          <img "class=contact_icon" src="http://academy.smashingboxes.com/assets/contact-icon-location-11d75fdfa5263eef0795e312cbfa500c.png">
+        <li class="contact_content">
+          <img class="contact_icon" src="http://academy.smashingboxes.com/assets/contact-icon-location-11d75fdfa5263eef0795e312cbfa500c.png">
           <div class="contact_info">
             334 Blackwell Street<br>
             Suite B017<br>
             Durham, NC 27701
           </div>
         </li>
-        <li>
-          <img "class=contact_icon" src="http://academy.smashingboxes.com/assets/contact-icon-phone-57c694cb16aa37a78abe3f684de98ed5.png">
-          <div class="contact_info">
+        <li class="contact_content">
+          <img class="contact_icon content-info" src="http://academy.smashingboxes.com/assets/contact-icon-phone-57c694cb16aa37a78abe3f684de98ed5.png">
+          <div class="contact_info content-info">
             1-855-762-7446
           </div>
         </li>
-        <li>
-          <img "class=contact_icon" src="http://academy.smashingboxes.com/assets/contact-icon-twitter-ea2cb26b9746300cecf6c5b5cde4dae3.png">
-          <div class="contact_info">
+        <li class="contact_content">
+          <img class="contact_icon content-info" src="http://academy.smashingboxes.com/assets/contact-icon-twitter-ea2cb26b9746300cecf6c5b5cde4dae3.png">
+          <div class="contact_info content-info">
           @smashingboxes
           </div>
         </li>
-        <li>
-          <img "class=contact_icon" src=http://academy.smashingboxes.com/assets/contact-icon-fb-781d36f7fa3b478df09e2760ca8350c0.png>
-          <div class="contact_info">
+        <li class="contact_content">
+          <img class="contact_icon content-info" src=http://academy.smashingboxes.com/assets/contact-icon-fb-781d36f7fa3b478df09e2760ca8350c0.png>
+          <div class="contact_info content-info">
             /smashingboxes
           </div>
         </li>
+        <li class="contact_content contact_message">
+          We’re looking for progressive business partners to help support the school! Contact Us about joining the Durham Advisory Board. Feel free to reach out to <a href="mailto:academy@smashingboxes.com?subject=Business%20Partner%20Information"><strong>academy@smashingboxes.com</strong></a> for details.
+        </li>
       </ul>
-      <!-- why is this throwing off my sections? <p>We’re looking for progressive business partners to help support the school! Contact us about joining the Durham Advisory Board. Feel free to reach out to academy@smashingboxes.com for details.
-      </p> -->
     </div>
   </div>
 </div>
 <footer>
   <div class="footer-bar">
-    <div>
-      <ul>
-        <li><a></a></li>
-        <li><a></a></li>
-        <li><a></a></li>
-      </ul>
-    </div>
-    <div>
-    </div>
-    <div>
-      <ul class="logo_bottom">
+    <div class="logo_bottom">
+      <ul class="logo_list">
         <li><a href="http://theironyard.com/"><img src="http://academy.smashingboxes.com/assets/ironyard_footer-7c7ff8373ab44a499a517aee4d4979bb.png"></a></li>
         <li><a href="http://smashingboxes.com/"><img src="http://academy.smashingboxes.com/assets/footer-icon-sb-173f73148a825348a0ea0882860731c1.png"></a></li>
         <li>&copy;2014 THE IRON YARD<br>
             &amp; SMASHING BOXES</li>
       </ul>
     </div>
-    <div class="clear"></div>
-    <div class="newsletter">
-      <p>Sign up for our newsletter
-      </p>
-      <form accept-charset="UTF-8" action="/newsletter" data-remote="true" id="newsletter" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div><label for="email">Email</label><input class="newsletter-email" name="email" type="email"><input class="submit_button" name="commit" type="submit" value="Submit"></form>
+    <div class="newsletter newsletter__sign-up">
+      <!-- <p class="news_sign_up">Sign up for our newsletter
+      </p> -->
+      <form accept-charset="UTF-8" action="/newsletter" data-remote="true" id="newsletter" method="post">
+          <div style="margin:0;padding:0;display:inline">
+              <input name="utf8" type="hidden" value="✓">
+          </div>
+          <label for="email">Sign up for our newsletter</label>
+          <input class="newsletter__email" name="email" type="email">
+          <input class="submit_button" type="submit" value="Submit">
+          </form>
+    </div>
+    <div class="social">
+      <ul>
+        <li><a href=""><img src="http://academy.smashingboxes.com/assets/footer-icon-instagram-0feb426dfa978f246464dcd8c5de9c51.png"></a></li>
+        <li><a href=""><img src="http://academy.smashingboxes.com/assets/footer-icon-twitter-67a8b5d3f2bfeaf1768dd2c5cf5dadac.png"></a></li>
+        <li><a href=""><img src="http://academy.smashingboxes.com/assets/footer-icon-fb-59db9e6f816b6ec74a628c89745b16e0.png"></a></li>
+      </ul>
+    </div>
   </div>
-  <div class="social">
-    <ul>
-      <li><a href=""><img src="http://academy.smashingboxes.com/assets/footer-icon-instagram-0feb426dfa978f246464dcd8c5de9c51.png"></a></li>
-      <li><a href=""><img src="http://academy.smashingboxes.com/assets/footer-icon-twitter-67a8b5d3f2bfeaf1768dd2c5cf5dadac.png"></a></li>
-      <li><a href=""><img src="http://academy.smashingboxes.com/assets/footer-icon-fb-59db9e6f816b6ec74a628c89745b16e0.png"></a></li>
-    </ul>
 </footer>
+<!-- <div class="modal">
+    <div class="modal-dialog">
+        <span class="exit">X</span>
+        <div class="modal-content">
+            <h2>Don't you want to join us?!?</h2>
+            <br>
+            <p>Just click here to start the process</p>
+            <br>
+            <a class="apply_button" href="http://academy.smashingboxes.com/#enroll">apply</a>
+        </div>
+    </div>
+</div> -->
 </body>
 </html>
