@@ -158,7 +158,11 @@ nav a:hover {
 
 .courseflow:hover .courseflow_bg_slide {
    width: 100%;
+<<<<<<< HEAD
    max-width: 52em;
+=======
+   /*max-width: 52em;*/
+>>>>>>> master
 }
 
 .courseflow_diagram {
