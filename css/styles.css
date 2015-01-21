@@ -134,6 +134,7 @@ nav a:hover {
 }
 
 .courseflow_bg {
+  position: relative;
   background: white;
   max-width: 52em;
   width: 60%;
@@ -145,10 +146,10 @@ nav a:hover {
 .courseflow_bg_slide {
    background-color: #eb1767;
    position: absolute;
-   left: 20%;
-   right: 20%;
+   left: 0;
+   top: 0;
    width: 0%;
-   height: 20%;
+   height: 71%%;
    transition-property: width;
    webkit-transition-property: width;
    -webkit-transition-duration: .5s; /* Safari */
@@ -156,11 +157,13 @@ nav a:hover {
 }
 
 .courseflow:hover .courseflow_bg_slide {
-   width: 60%;
+   width: 100%;
+   max-width: 52em;
 }
 
 .courseflow_diagram {
   width:100%;
+  padding: 0;
   max-width: 52em;
   text-align: center;
   vertical-align: middle;
